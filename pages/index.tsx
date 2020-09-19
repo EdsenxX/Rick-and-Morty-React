@@ -6,6 +6,7 @@ import styles from "./index.module.scss";
 //Components
 import CardCharacter from "@components/CardCharacter/CardCharacter";
 import Pagination from "@components/Pagination/Pagination";
+import Header from "@components/Header/header";
 
 interface IProps {}
 
@@ -61,11 +62,9 @@ class Home extends Component<IProps, IState> {
   render() {
     return (
       <div className={styles.home}>
-        <div className={styles.home_header}>
-          <img src="/images/logo.png" alt="logo" />
-        </div>
+        <Header />
         {this.showPagination()}
-        <div className={styles.header_content}>
+        <div className={styles.home_content}>
           <CardCharacter characters={this.state.characters} />
         </div>
         {this.showPagination()}

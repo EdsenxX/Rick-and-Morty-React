@@ -1,14 +1,10 @@
 //Dependencies
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 //Assets
 import style from "./styles.module.scss";
 
 const CardCharacter = (props): JSX.Element => {
-  useState(() => {
-    console.log(props);
-  });
-
   const getFormattedDate = (date) => {
     let modificacion = new Date(date);
     let month: any = modificacion.getMonth() + 1;
@@ -50,7 +46,9 @@ const CardCharacter = (props): JSX.Element => {
           <div className={style.body_fild}>
             <p className={style.fild_title}>Origin:</p>
             <p className={style.fild_body}>
-              <Link href="/blog/hello-world">
+              <Link
+                href={`/location/${character.origin.url.split("/").slice(-1)}`}
+              >
                 <a>{character.origin.name}</a>
               </Link>
             </p>
@@ -58,17 +56,23 @@ const CardCharacter = (props): JSX.Element => {
           <div className={style.body_fild}>
             <p className={style.fild_title}>Location:</p>
             <p className={style.fild_body}>
-              <Link href="/blog/hello-world">
+              <Link
+                href={`/location/${character.location.url
+                  .split("/")
+                  .slice(-1)}`}
+              >
                 <a>{character.location.name}</a>
               </Link>
             </p>
           </div>
         </div>
-        <button className={style.info_button}>
-          <Link href={`/character/${character.id}`}>
-            <a className={style.button_link}>Show More</a>
-          </Link>
-        </button>
+        <div className={style.info_buttons}>
+          <button className={style.button_element}>
+            <Link href={`/character/${character.id}`}>
+              <a className={style.button_link}>Show More</a>
+            </Link>
+          </button>
+        </div>
       </div>
     </div>
   ));

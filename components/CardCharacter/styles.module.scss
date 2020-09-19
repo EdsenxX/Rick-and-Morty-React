@@ -31,23 +31,28 @@
         }
       }
     }
-    .info_button {
-      margin: 1rem auto;
-      outline: none;
-      border: none;
-      background: none;
-      font-size: 1.5rem;
-      font-family: "Indie Flower", cursive;
-      border: 0.1rem solid chartreuse;
-      padding: 0.2rem 0.5rem;
-      cursor: pointer;
-      &:hover {
-        background-color: chartreuse;
-        transform: scale(1.1);
-      }
-      .button_link {
-        color: #000;
-        text-decoration: none;
+    .info_buttons {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 1rem 0;
+      .button_element {
+        outline: none;
+        border: none;
+        background: none;
+        font-size: 1.5rem;
+        font-family: "Indie Flower", cursive;
+        border: 0.2rem solid chartreuse;
+        padding: 0.2rem 0.5rem;
+        cursor: pointer;
+        &:hover {
+          background-color: chartreuse;
+          transform: scale(1.1);
+        }
+        .button_link {
+          color: #000;
+          text-decoration: none;
+        }
       }
     }
   }
