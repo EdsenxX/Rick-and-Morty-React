@@ -1,0 +1,54 @@
+.card {
+  width: 41rem;
+  display: flex;
+  padding: 1rem;
+  background-color: #fafafa;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  .image {
+    width: 50%;
+  }
+  .info {
+    width: 50%;
+    .info_name {
+      font-family: "Montserrat", sans-serif;
+      font-size: 2rem;
+      text-align: center;
+      margin: 0.5rem 0;
+    }
+    .info_body {
+      .body_fild {
+        display: flex;
+        align-items: center;
+        .fild_title {
+          font-weight: 800;
+          margin-right: 0.3rem;
+          font-family: "Indie Flower", cursive;
+        }
+        .fild_body {
+          font-family: "Montserrat", sans-serif;
+          font-size: 0.9rem;
+        }
+      }
+    }
+    .info_button {
+      margin: 1rem auto;
+      outline: none;
+      border: none;
+      background: none;
+      font-size: 1.5rem;
+      font-family: "Indie Flower", cursive;
+      border: 0.1rem solid chartreuse;
+      padding: 0.2rem 0.5rem;
+      cursor: pointer;
+      &:hover {
+        background-color: chartreuse;
+        transform: scale(1.1);
+      }
+      .button_link {
+        color: #000;
+        text-decoration: none;
+      }
+    }
+  }
+}

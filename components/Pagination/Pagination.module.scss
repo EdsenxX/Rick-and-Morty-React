@@ -1,0 +1,30 @@
+@mixin element {
+  padding: 0.5rem;
+  background-color: #f6f6f6;
+  margin: 0 0.2rem;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  .pagination_list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    .list_element {
+      @include element();
+    }
+    .list_current_element {
+      @include element();
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}
